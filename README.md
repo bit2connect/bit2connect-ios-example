@@ -17,11 +17,30 @@ This is an example iOS application demonstrating how to integrate and use the Bi
 
 Please see [SETUP.md](SETUP.md) for detailed setup instructions.
 
-Quick setup:
-1. Create a new iOS project in Xcode
-2. Add the Bit2Connect SDK as a dependency
-3. Copy the example files from this project
-4. Update the API key in `AppDelegate.swift`:
+### Quick Setup with CocoaPods (Recommended)
+
+1. Install CocoaPods if you haven't already:
+   ```bash
+   sudo gem install cocoapods
+   ```
+
+2. Clone this example project:
+   ```bash
+   git clone https://github.com/bit2connect/bit2connect-ios-example.git
+   cd bit2connect-ios-example
+   ```
+
+3. Install dependencies:
+   ```bash
+   pod install
+   ```
+
+4. Open the workspace:
+   ```bash
+   open Bit2ConnectExample.xcworkspace
+   ```
+
+5. Update the API key in `AppDelegate.swift`:
    ```swift
    Bit2ConnectSDK.shared.initialize(
        baseURL: "https://api.bit2connect.com",
@@ -29,6 +48,10 @@ Quick setup:
        debugMode: true
    )
    ```
+
+### Alternative: Swift Package Manager
+
+If you prefer SPM, see the detailed instructions in [SETUP.md](SETUP.md).
 
 ## Usage
 

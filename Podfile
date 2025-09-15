@@ -5,7 +5,7 @@ target 'Bit2ConnectExample' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for Bit2ConnectExample
-  pod 'Bit2ConnectSDK', '~> 1.0.0'
+  # Bit2Connect SDK
+  pod 'Bit2ConnectSDK', '~> 1.0.1'
 
 end
