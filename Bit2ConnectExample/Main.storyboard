@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bit2ConnectExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8xK-8K-8xK">
+                                <rect key="frame" x="20" y="100" width="353" height="652"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bit2Connect SDK Example" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xK-8K-8xL">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SDK Status: Not Initialized" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xK-8K-8xM">
+                                        <rect key="frame" x="0.0" y="40.333333333333314" width="353" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xK-8K-8xN">
+                                        <rect key="frame" x="0.0" y="80.666666666666686" width="353" height="30"/>
+                                        <state key="normal" title="Create Dynamic Link"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Create Dynamic Link"/>
+                                        <connections>
+                                            <action selector="createDynamicLinkTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="8xK-8K-8xO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xK-8K-8xP">
+                                        <rect key="frame" x="0.0" y="130.66666666666666" width="353" height="30"/>
+                                        <state key="normal" title="Test Storage"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Test Storage"/>
+                                        <connections>
+                                            <action selector="testStorageTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="8xK-8K-8xQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xK-8K-8xR">
+                                        <rect key="frame" x="0.0" y="180.66666666666666" width="353" height="30"/>
+                                        <state key="normal" title="Clear All Data"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Clear All Data"/>
+                                        <connections>
+                                            <action selector="clearDataTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="8xK-8K-8xS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8xK-8K-8xK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8xK-8K-8xT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8xK-8K-8xK" secondAttribute="trailing" constant="20" id="8xK-8K-8xU"/>
+                            <constraint firstItem="8xK-8K-8xK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="8xK-8K-8xV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clearDataButton" destination="8xK-8K-8xR" id="8xK-8K-8xW"/>
+                        <outlet property="createLinkButton" destination="8xK-8K-8xN" id="8xK-8K-8xX"/>
+                        <outlet property="statusLabel" destination="8xK-8K-8xM" id="8xK-8K-8xY"/>
+                        <outlet property="testStorageButton" destination="8xK-8K-8xP" id="8xK-8K-8xZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
